@@ -1,0 +1,32 @@
+{
+  "name": "v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./api/index.js",
+  "scripts": {
+    "modelCreate": "sequelize-cli model:create --name",
+    "seedCreate": "sequelize-cli seed:generate --name",
+    "undoSeed": "sequelize-cli db:seed:undo:all",
+    "seed": "sequelize-cli db:seed:all",
+    "undoMigrate": "sequelize-cli db:migrate:undo:all",
+    "migrate": "sequelize-cli db:migrate",
+    "undoAll": "npm run undoSeed && npm run undoMigrate",
+    "migrateAll": "npm run migrate && npm run seed",
+    "start": "nodemon ./api/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.0.1",
+    "path": "^0.12.7",
+    "sequelize": "^5.21.7",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
